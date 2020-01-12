@@ -88,3 +88,37 @@ console.log(fullName.endsWith('K')); // true
 console.log(fullName.includes('o')); // false
 console.log(`${fullName} `.repeat(5)); // Kelvin Geek. Kelvin Geek. Kelvin Geek. Kelvin Geek. Kelvin Geek.
 
+
+// ES6 Arrow Functions
+
+const years = [1990, 1992, 1995, 1997];
+
+// ES5 
+var ages5 = years.map(function(current, index, array) {
+    return 2020 - current;
+});
+
+console.log(age5);
+
+// ES6
+let ages6 = years.map(current => 2020 - current);
+
+console.log(ages6);
+
+ages6 = years.map((current, index, array) => `Age element ${index+1}: ${2020 - current}.`);
+
+console.log(ages6);
+
+ages6 = years.map((current, index, array) => {
+    return 2020 - current;
+});
+
+console.log(ages6);
+
+ages6 = years.map((current, index, array) => {
+    const now = new Date().getFullYear();
+    const age = now - current;
+    return `Age element ${index+1}: ${age}.`;
+});
+
+console.log(ages6);

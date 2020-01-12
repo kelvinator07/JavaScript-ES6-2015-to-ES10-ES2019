@@ -55,7 +55,7 @@ driversLicense(true);
 
 console.log(a); // Not accessible because of block
 
-// ES 6
+// ES6
 {
     const b = 1;
     let c = 2;
@@ -63,4 +63,28 @@ console.log(a); // Not accessible because of block
 
 console.log(b + c); // Not accessible because of block
 
+
+
+// Strings format
+
+let firstName = 'Kelvin';
+let lastName = 'Geek';
+const yearOfBirth = 1995;
+
+function calcAge(year) {
+    return 2016 - year;
+}
+
+// ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
+
+// ES6
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`);
+
+
+const fullName = `${firstName} ${lastName}.`;
+console.log(fullName.startsWith('K')); // true
+console.log(fullName.endsWith('K')); // true
+console.log(fullName.includes('o')); // false
+console.log(`${fullName} `.repeat(5)); // Kelvin Geek. Kelvin Geek. Kelvin Geek. Kelvin Geek. Kelvin Geek.
 

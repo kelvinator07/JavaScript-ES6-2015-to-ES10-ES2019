@@ -46,3 +46,21 @@ driversLicense(true);
 
 
 
+// Blocks and IIFE
+
+// ES5
+(function() {
+    var a = 3;
+})();
+
+console.log(a); // Not accessible because of block
+
+// ES 6
+{
+    const b = 1;
+    let c = 2;
+}
+
+console.log(b + c); // Not accessible because of block
+
+
